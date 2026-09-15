@@ -1317,8 +1317,8 @@ function renderReviewTab(){
   }
   html += '</div>';
 
-  html += '<div class="review-block"><h3>Build your final summary</h3>'
-    + '<p class="footer-note" style="margin-bottom:8px;">Now that your experience and (optionally) a target federal announcement are in, see refined summary options built from all of it.</p>'
+  html += '<div class="review-block"><h3>Refine your Professional Summary</h3>'
+    + '<p class="footer-note" style="margin-bottom:8px;">If you wrote an optional Professional Summary, review alternate versions based on your draft, listed skills, and any matching announcement terms. Your summary changes only when you select a version.</p>'
     + '<button type="button" class="btn btn-outline btn-small" onclick="showSummaryPolish(\'reviewSummaryPolishPanel\')">Polish my summary</button>'
     + '<div id="reviewSummaryPolishPanel"></div>'
     + '</div>';
@@ -1400,7 +1400,7 @@ function renderAll(){
   renderFormPanel();
   renderPreview();
   updateMobileWorkflow();
-  document.title = state.contact.name ? (state.contact.name + " — Federal Resume Builder & Job-Match Coach") : "Federal Resume Builder & Job-Match Coach";
+  document.title = "Federal Resume Builder & Job-Match Coach";
 }
 
 document.addEventListener('input', function(e){
@@ -1410,7 +1410,6 @@ document.addEventListener('input', function(e){
   persist();
   renderPreview();
   renderRail();
-  if(path === "contact.name") document.title = e.target.value ? (e.target.value + " — Federal Resume Builder & Job-Match Coach") : "Federal Resume Builder & Job-Match Coach";
   if(e.target.hasAttribute('data-coach')) updateCoachFeedback(e.target);
 });
 
